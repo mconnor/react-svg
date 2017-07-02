@@ -10,17 +10,17 @@ function randomVal() {
 
 export default  [
 	[
-     [1, 3],
-     [2, 5],
-     [3, 2],
-     [4, 16],
-     [18, 5]
+     [1, randomVal()],
+     [2, randomVal()],
+     [3, randomVal()],
+     [4, randomVal()],
+     [18, randomVal()]
    ],
    [
-     [1, 16],
-     [2, 23],
-     [3, 5],
-     [4, 3],
-     [5, 1]
+     [1, randomVal()],
+     [2, randomVal()],
+     [3, randomVal()],
+     [4, randomVal()],
+     [5, randomVal()]
    ]
 ];
