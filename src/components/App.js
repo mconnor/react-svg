@@ -1,14 +1,27 @@
-import React, {Component} from 'react';
-import Graph from './Graph';
+import React from 'react';
+import Graph from './Graph'
 
+export default class App extends React.Component {
+  state = { dataSetIndex: 0 }
 
+  selectDataset(event) {
+    this.setState({dataSetIndex: event.target.value});
+  }
 
-class App extends Component {
   render() {
+    let options = this.props.datasets.map((_, index) => {
+      return <option key={index} value={index}>Dataset {index + 1}</option>
+    });
+
     return (
-      <Graph data={this.props.data}></Graph>
-    );
+      <div>
+        <select
+          value={this.state.dataSetIndex}
+          onChange={this.selectDataset.bind(this)} >
+          {options}
+        </select>
+        <Graph data={this.props.datasets[this.state.dataSetIndex]} />
+      </div>
+    )
   }
 }
-
-export default App;

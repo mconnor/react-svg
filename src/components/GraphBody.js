@@ -11,7 +11,9 @@ export default class GraphBody extends React.Component {
       let yNext = this.props.y - chunk[1] * this.props.multiplier;
       return `L ${xNext} ${yNext}`;
     });
-
+// console.log(collector);
+// console.log(d);
+// console.log(d.concat(collector).join(' '));
     return d.concat(collector).join(' ');
   }
 
